@@ -274,7 +274,7 @@ header .overlay {
 
 
 .project-body .card:hover {
-  height: 610px;
+  height: 650px;
   width: 750px;
   background-color: black;
 
@@ -452,7 +452,7 @@ font-size: 20px;
 }
 
 .project-body .card:hover {
-  height: 800px;
+  height: 850px;
 }
 
 .contact-row{
