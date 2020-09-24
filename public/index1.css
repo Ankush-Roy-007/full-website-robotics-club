@@ -151,6 +151,7 @@
 .login-form-total-div{  
   margin-top: -380px;
   color: white;
+  position: relative;z-index: 2;
 }
 
 .login-form-image{
