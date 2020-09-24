@@ -146,7 +146,13 @@ app.get("/blog",function(req,res){
     res.render("register",{
       messagereg:"Error 404 !"
     });
-  }else{res.render("blog",{
+  }
+  else if(data.length==0){
+    res.render("register",{
+      messagereg:"No blog posted !"
+    });
+  }
+  else{res.render("blog",{
     data:data,
   });}  
  });
@@ -175,7 +181,9 @@ app.post("/createblog",function(req,res){
   Content:req.body.blogcontent
   });
   blogdone.save();
-  res.redirect("/createblog");
+  res.render("register",{
+    messagereg:"Blog posted successfully !"
+  });
 });
 
 app.get("/blog/:find",function(req,res){  
