@@ -1,0 +1,22 @@
+<%- include("partials/headermember") -%>
+
+<div class="container add-form-total-div">
+    <form class="add-form" method="post" action="/createblog">
+      <div class="add-form-div">
+  <legend class="createblog-legend">Write Blog<br></legend>
+  <hr class="add-form-hr">
+  <div class="createblog-body">
+        <label class="add-form-label">Subject</label><br>      
+        <input type="text" name="blogsubject" class="createblog-input btn-lg btn-outline-info" required placeholder="Subject"><br>
+        <label class="add-form-label">Date</label><br>
+        <input type="date" name="blogdate" class="createblog-input btn-lg btn-outline-info" style="color:white" required><br>
+        <label class="add-form-label">Content</label><br>
+        <textarea rows="10" cols="100" name="blogcontent" class="createblog-input btn-lg btn-outline-info" required></textarea>
+  </div>   
+</div><br>
+<input type="submit" name="" class="create-blog-submit btn btn-lg btn-success">
+</form><br><br><br>
+  </div>
+
+
+<%- include("partials/footer") -%>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="text/css" href="../photos/logo-ico.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../index1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>AIT-CEAR</title>
+  </head>
+  <body>
+
+
+    <div class="navnav" style="position: fixed;width: 100%;">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <img src="../photos/AIT-CEAR.jpg" alt="AIT-CEAR.jpg" class="nav-logo">
+        <a class="navbar-brand nav-title" href="/">Hey <%=user_name%> !</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav nav-menu">
+            <li class="nav-item active">
+              <a class="nav-link" href="/add">New-User<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/createblog">Create-Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">Display-Team</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Others
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/updatepasswordmember">Change-Password</a>
+                <!--<a class="dropdown-item" href="#">Projects</a>
+                <a class="dropdown-item" href="#">Something else here</a>-->
+              </div>
+            </li>
+          </ul>
+          <button type="button" name="button" class="btn btn-outline-primary" onclick="window.location.href='/logout'"><i class="fas fa-sign-in-alt coming-button"></i></i><span class="nav-login">Logout</span></button>
+        </div>
+      </nav>
+    </div>
+    <div class="rest-body">
+    <img src="../photos/full-logo.jpg" class="sticky-logo">

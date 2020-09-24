@@ -1,0 +1,16 @@
+<%- include("partials/headerclient") %>
+
+	
+	 <div class="container blog-total-div">
+	 <% data.forEach(function(singledata){ %>
+    <div class="blog-div">
+      <h2 class="blog-client-heading"><%= singledata.Subject %><sub style="font-size:15px;float:right;padding-top:10px;"><%= singledata.Date %></sub></h2>
+      <p class="blog-client-para"><%= singledata.Content.substring(0,100)+" . . . . " %><sub><a href="/blog/<%=singledata._id%>" style="color:#6389F9">Read More</a></sub></p>
+    </div><hr style="
+  border:1px solid #576060;width:75%;"><br>
+   <% }); %>
+  </div>
+    
+
+
+<%- include("partials/footer") %>

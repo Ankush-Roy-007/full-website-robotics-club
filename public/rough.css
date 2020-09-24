@@ -1,0 +1,79 @@
+.nav-logo{
+  width: 55px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.navnav{
+  background-color: #000000;
+  position: relative;
+  z-index: 3;
+}
+
+.nav-title{
+  padding-left:5px;
+  font-weight: bolder;
+}
+
+.nav-menu{
+  margin: auto;
+  font-size: 18px;
+}
+
+.nav-login{
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.sticky-logo{
+  z-index: 0;
+  height: 500px;
+  border-radius: 100%;
+  opacity: 0.09;
+  position: sticky;
+  width: 520px;
+  top:90px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rest-body{
+  background-color: #000000;
+  min-height: 90vh;
+}
+
+
+.contact-div{
+  background-color: #23A0A0;
+  color: black;
+  overflow-x: hidden;
+}
+.copyright{
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 0.8%;
+  font-size: 20px;
+}
+@media (max-width:990px){
+  .sticky-logo{
+  z-index: 0;
+  height: 500px;
+  border-radius: 100%;
+  opacity: 0.09;
+  position: sticky;
+  width: 520px;
+  top:33%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-link{
+  font-size: 30px;
+}
+.navbar-brand{
+  font-size: 50px;
+}
+
+
+}

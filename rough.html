@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+	<div class="container add-form-total-div">
+    <form class="add-form" method="post" action="www.google.com"  onsubmit="return check()">
+      <div class="add-form-div">
+  <legend class="add-legend">Student's Details<br><h4 id="invalidity"></h4></legend>
+  <hr class="add-form-hr">
+  <table class="add-table">
+    <tbody>
+      <tr>
+        <td colspan="2" class="add-form-radio"><input type="radio" name="auth" required> Admin</td>
+        <td class="add-form-radio"><input type="radio" name="auth">Member</td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">First Name</label></td>
+        <td>:</td>
+        <td><input type="text" name="fname" class="add-form-input" required></td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Last Name</label></td>
+        <td>:</td>
+        <td><input type="text" name="lname" class="add-form-input" required></td>
+      <tr>
+        <td><label class="add-form-label">Registration No.</label></td>
+        <td>:</td>
+        <td><input type="number" name="regnno" class="add-form-input" required></td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Year</label></td>
+        <td>:</td>
+        <td><select class="add-form-input" name="year" required>
+          <option value="FE">FE</option>
+          <option value="SE">SE</option>
+          <option value="TE">TE</option>
+          <option value="BE">BE</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Branch</label></td>
+        <td>:</td>
+        <td><select class="add-form-input" name="branch" required>
+          <option value="Mechanical">Mechanical</option>
+          <option value="Electronics and Telecommunication">Electronics and Telecommunication</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Computer Science">Computer Science</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Phone No.</label></td>
+        <td>:</td>
+        <td><input type="tel" name="phn" id="phn" class="add-form-input" required></td>
+      </tr>
+        <tr>
+        <td><label class="add-form-label">Email ID</label></td>
+        <td>:</td>
+        <td><input type="email" name="email" id="email" class="add-form-input" required></td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Domain</label></td>
+        <td>:</td>
+        <td><select class="add-form-input" name="domain" required>
+          <option value="Web Development">Web Development</option>
+          <option value="Publicity">Publicity</option>
+          <option value="Sponsorship">Sponsorship</option>
+          <option value="Photoshop and poster">Photoshop and poster</option>
+          <option value="Content Writing">Content Writing</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Password</label></td>
+        <td>:</td>
+        <td><input type="password" name="pass" id="pass" class="add-form-input" required></td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Confirm Password</label></td>
+        <td>:</td>
+        <td><input type="password" name="conpass" id="conpass" class="add-form-input" required></td>
+      </tr>
+    </tbody>
+  </table>
+</div><br>
+<input type="submit" name="" class="btn btn-lg btn-block btn-success">
+</form><br><br><br>
+  </div>
+  <textarea></textarea>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="addvalidation.js"></script>
+</body>
+</html>
+

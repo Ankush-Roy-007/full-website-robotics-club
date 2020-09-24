@@ -1,0 +1,90 @@
+<%- include("partials/headermanager") -%>
+
+<div class="container add-form-total-div">
+    <form class="add-form" method="post" action="/updatedone/<%=idfound.username%>"  onsubmit="return check()">
+      <div class="add-form-div">
+  <legend class="add-legend">Student's Details<br><h4 id="invalidity"></h4></legend>
+  <hr class="add-form-hr">
+  <table class="add-table">
+    <tbody>
+      <tr>
+        <td colspan="2" class="add-form-radio"><input type="radio" name="auth" required value="Admin" <%if(idfound.Authorization=="Admin"){%>
+        <%="checked"%>
+    <%}%>>  Admin</td>
+        <td class="add-form-radio"><input type="radio" name="auth" value="Member" <%if(idfound.Authorization=="Member"){%>
+        <%="checked"%>
+    <%}%>>  Member</td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">First Name</label></td>
+        <td>:</td>
+        <td><input type="text" name="fname" class="add-form-input" value="<%=idfound.First_Name%>" required></td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Last Name</label></td>
+        <td>:</td>
+        <td><input type="text" name="lname" class="add-form-input" required value="<%=idfound.Last_name%>"></td>
+      <tr>
+        <td><label class="add-form-label">Year</label></td>
+        <td>:</td>
+        <td><select class="add-form-input" name="year" required>
+          <option value="FE" <%if(idfound.Year=="FE"){%><%="selected"%><%}%>>FE</option>
+          <option value="SE" <%if(idfound.Year=="SE"){%><%="selected"%><%}%>>SE</option>
+          <option value="TE" <%if(idfound.Year=="TE"){%><%="selected"%><%}%>>TE</option>
+          <option value="BE" <%if(idfound.Year=="BE"){%><%="selected"%><%}%>>BE</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Branch</label></td>
+        <td>:</td>
+        <td><select class="add-form-input" name="branch" required>
+          <option value="Mechanical" <%if(idfound.Branch=="Mechanical"){%><%="selected"%><%}%>>Mechanical</option>
+          <option value="Electronics and Telecommunication" <%if(idfound.Branch=="Electronics and Elecommunication"){%><%="selected"%><%}%>>Electronics and Telecommunication</option>
+          <option value="Information Technology" <%if(idfound.Branch=="Information Technology"){%><%="selected"%><%}%>>Information Technology</option>
+          <option value="Computer Science" <%if(idfound.Branch=="Computer Science"){%><%="selected"%><%}%>>Computer Science</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Phone No.</label></td>
+        <td>:</td>
+        <td><input type="tel" name="phn" id="phn" class="add-form-input" required value="<%=idfound.Phone_No%>"></td>
+      </tr>
+        <tr>
+        <td><label class="add-form-label">Email ID</label></td>
+        <td>:</td>
+        <td><input type="email" name="email" id="email" class="add-form-input" required value="<%=idfound.E_mail%>"></td>
+      </tr>
+      <tr>
+        <td><label class="add-form-label">Domain</label></td>
+        <td>:</td>
+        <td><select class="add-form-input" name="domain" required>
+          <option value="Web Development" <%if(idfound.Domain=="Web Development"){%>
+        <%="selected"%>
+    <%}%>>Web Development</option>
+          <option value="Publicity" <%if(idfound.Domain=="Publicity"){%>
+        <%="selected"%>
+    <%}%>>Publicity</option>
+          <option value="Sponsorship" <%if(idfound.Domain=="Sponsorship"){%>
+        <%="selected"%>
+    <%}%>>Sponsorship</option>
+          <option value="Photoshop and poster" <%if(idfound.Domain=="Photoshop and poster"){%>
+        <%="selected"%>
+    <%}%>>Photoshop and poster</option>
+          <option value="Content Writing" <%if(idfound.Domain=="Content Writing"){%>
+        <%="selected"%>
+    <%}%>>Content Writing</option>
+        </select></td>
+      </tr>
+    </tbody>
+  </table>
+</div><br>
+<input type="submit" name="" class="btn btn-lg btn-block btn-success" value="Update">
+</form><br><br><br>
+  </div>
+
+
+<%- include("partials/footer") -%>
+
+

@@ -1,0 +1,299 @@
+.nav-logo{
+  width: 55px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.navnav{
+  background-color: #000000;
+  position: relative;
+  z-index: 3;
+}
+
+.nav-title{
+  padding-left:5px;
+  font-weight: bolder;
+}
+
+.nav-menu{
+  margin: auto;
+  font-size: 18px;
+}
+
+.nav-login{
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.sticky-logo{
+  z-index: -1;
+  height: 500px;
+  border-radius: 100%;
+  opacity: 0.09;
+  position: sticky;
+  width: 520px;
+  top:90px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rest-body{
+  background-color: #000000;
+  min-height: 100vh;
+  opacity: 0.99;
+}
+
+
+.contact-div{
+  background-color: #23A0A0;
+  color: black;
+  overflow-x: hidden;
+}
+.copyright{
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 0.8%;
+  font-size: 20px;
+}
+.add-legend{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  color: #23A0A0;
+}
+.add-form-div{
+  line-height: 2;
+}
+.add-table{
+  margin: auto;
+}
+.add-form-label{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.add-form-input{
+  width: 300px;
+  height: 40px;
+  margin-left: 15px;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom,white,#23A0A0 );
+}
+.add-form-input:focus{  
+    border: 3px solid #1670BE;
+    box-shadow: 0 0 10px #1670BE;
+    border-right: hidden;
+    border-top: hidden;
+    border-left: hidden;
+    outline-offset: 0px;
+    outline: none;
+    border-radius: 0;
+    opacity: 0.95;
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.add-form-total-div{
+  margin-top: -450px;
+  color: white;
+}
+
+.add-form-hr{
+  height:3px;
+  background-color: #23A0A0;
+  width: 75%;
+}
+
+.add-form-radio{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.login-form-total{
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.login-form-legend{
+  padding-bottom: 45px;
+  font-size: 55px;
+  font-weight: bolder;
+  color: #23A0A0;
+}
+.login-form-input{
+  margin-top: 30px;
+}
+.login-form-width{
+  width: 250px;
+  border-top: hidden;
+  border-right: hidden;
+  border-left:hidden;
+  background-color: black;
+  color: white;
+  border-bottom: 3px #23A0A0 solid;
+  font-size: 20px;
+}
+.login-form-width::placeholder{
+  color: white;
+  font-weight: 500;
+}
+
+.login-form-width:focus{
+  outline: none;
+  font-size: 25px;
+}
+.login-form-submit{
+  margin-top: 30px;
+}
+.login-form-total-div{  
+  margin-top: -380px;
+  color: white;
+}
+
+.login-form-image{
+  width:150px;
+  height: 150px;
+}
+.login-form-radio{
+  padding: 20px;
+}
+
+.blog-client-heading{
+  color: #23A0A0;
+}
+
+.blog-client-para{
+  color: white;
+}
+
+.blog-total-div{
+  margin-top: -400px;
+}
+.blog-div{
+  padding-bottom: 15px;
+}
+
+.not-registered{
+  text-align: center;
+  margin-top: -350px;
+}
+
+.not-registered-heading{
+  color:#23A0A0;
+  font-size: 70px;
+  padding: 30px;
+}
+
+.not-registered-home{
+  font-size: 25px;
+}
+
+.fa-hand-point-left{
+  padding-right: 10px;
+}
+
+#invalidity{
+  display: none;
+  color: red;
+}
+
+.createblog-legend{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+  color: #23A0A0;
+}
+
+.createblog-body{
+  text-align: center;
+}
+
+.createblog-input{
+  width: 600px;
+  border-width: 5px;
+  font-weight: bold;
+}
+.createblog-input::placeholder{
+  color:white;
+}
+
+.createblog-input:focus{
+  font-size: 25px;
+  width: 800px;
+}
+
+.create-blog-submit{
+  display: block;
+  margin:auto;
+}
+
+.table-member-total-div{
+  margin-top: -400px;
+  text-align: center;
+  overflow-x: hidden;
+}
+.table-member-heading{
+  color: #23A0A0;
+}
+
+.table-member-head{
+  background-color: #23A0A0;
+}
+
+.table-member-body td{
+  border:1px solid #23A0A0;
+}
+
+.table-member-body tr{
+  color: white;
+}
+
+.table-member-body tr:hover{
+  background-color: #A8F5EB;
+  color: black;
+}
+
+.tablememselect{
+  color: #23A0A0;
+}
+@media (max-width:990px){
+  .sticky-logo{
+  z-index: 0;
+  height: 500px;
+  border-radius: 100%;
+  opacity: 0.09;
+  position: sticky;
+  width: 520px;
+  top:33%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-link{
+  font-size: 30px;
+}
+.navbar-brand{
+  font-size: 50px;
+}
+.login-form-total-div{ 
+  color: white;
+}
+.add-form-total-div{
+  font-size: 30px;
+}
+}
+@media (max-device-width: 470px) and (min-device-width:260px)  {
+.login-form-total-div{  
+  margin-top: 10px;
+}
+.rest-body{
+  background-color: #000000;
+  min-height: 90vh;
+  opacity: 0.99;
+}
+}
+
+

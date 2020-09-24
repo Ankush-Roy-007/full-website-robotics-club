@@ -1,0 +1,145 @@
+<%- include("partials/headermanager") %>
+<div class="table-member-total-div">
+    <h1 class="table-member-heading"><u>Student's List</u></h1><br>
+    <table  style="width: 100%;text-align: center;">
+      <tr class="tablememselect">
+        <td colspan="3"><input type="radio" name="tablememselect" onclick="window.location='/admin';"> Admin</td>
+        <td><input type="radio" name="tablememselect" onclick="window.location='/member';" checked> Member</td>
+        <td><input type="radio" name="tablememselect" onclick="window.location='/all';"> All</td>
+      </tr>
+    </table><br>
+    <table class="table">
+  <thead class="table-member-head">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Auth</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Regn No.</th>
+      <th scope="col">Year</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Phn No.</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Domain</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody class="table-member-body table-sm">
+<%counts=0; %>
+  <%tabledata.forEach(function(member){%>
+  <%if(member.Authorization=="Member"){%>
+  <%if(member.Domain=="Web Development"){%>
+  <%counts=counts+1 %>
+    <tr>
+      <td><%- counts %></td>
+      <td><%= member.Authorization %></td>
+      <td><%= member.First_Name %></td>
+      <td><%= member.Last_name %></td>
+      <td><%= member.username %></td>
+      <td><%= member.Year %></td>
+      <td><%= member.Branch %></td>
+      <td><%= member.Phone_No %></td>
+      <td><%= member.E_mail %></td>
+      <td><%= member.Domain %></td>
+      <td><a href="/update/<%=member.username%>"> <i class="fas fa-pen"></i> </a></td>
+      <td><a href="/delete/<%=member.username%>"> <i class="fas fa-trash-alt"></i> </a></td>
+    </tr>
+    <%}%>
+    <%}%>
+   <% })%>
+
+   <%tabledata.forEach(function(member){%>
+  <%if(member.Authorization=="Member"){%>
+  <%if(member.Domain=="Publicity"){%>
+  <%counts=counts+1 %>
+    <tr>
+      <td><%- counts %></td>
+      <td><%= member.Authorization %></td>
+      <td><%= member.First_Name %></td>
+      <td><%= member.Last_name %></td>
+      <td><%= member.username %></td>
+      <td><%= member.Year %></td>
+      <td><%= member.Branch %></td>
+      <td><%= member.Phone_No %></td>
+      <td><%= member.E_mail %></td>
+      <td><%= member.Domain %></td>
+      <td><a> <i class="fas fa-pen"></i> </a></td>
+      <td><a> <i class="fas fa-trash-alt"></i> </a></td>
+    </tr>
+    <%}%>
+    <%}%>
+   <% })%>
+
+   <%tabledata.forEach(function(member){%>
+  <%if(member.Authorization=="Member"){%>
+  <%if(member.Domain=="Sponsorship"){%>
+  <%counts=counts+1 %>
+    <tr>
+      <td><%- counts %></td>
+      <td><%= member.Authorization %></td>
+      <td><%= member.First_Name %></td>
+      <td><%= member.Last_name %></td>
+      <td><%= member.username %></td>
+      <td><%= member.Year %></td>
+      <td><%= member.Branch %></td>
+      <td><%= member.Phone_No %></td>
+      <td><%= member.E_mail %></td>
+      <td><%= member.Domain %></td>
+      <td><a> <i class="fas fa-pen"></i> </a></td>
+      <td><a> <i class="fas fa-trash-alt"></i> </a></td>
+    </tr>
+    <%}%>
+    <%}%>
+   <% })%>
+
+   <%tabledata.forEach(function(member){%>
+  <%if(member.Authorization=="Member"){%>
+  <%if(member.Domain=="Photoshop and poster"){%>
+  <%counts=counts+1 %>
+    <tr>
+      <td><%- counts %></td>
+      <td><%= member.Authorization %></td>
+      <td><%= member.First_Name %></td>
+      <td><%= member.Last_name %></td>
+      <td><%= member.username %></td>
+      <td><%= member.Year %></td>
+      <td><%= member.Branch %></td>
+      <td><%= member.Phone_No %></td>
+      <td><%= member.E_mail %></td>
+      <td><%= member.Domain %></td>
+      <td><a> <i class="fas fa-pen"></i> </a></td>
+      <td><a> <i class="fas fa-trash-alt"></i> </a></td>
+    </tr>
+    <%}%>
+    <%}%>
+   <% })%>
+
+   <%tabledata.forEach(function(member){%>
+  <%if(member.Authorization=="Member"){%>
+  <%if(member.Domain=="Content Writing"){%>
+  <%counts=counts+1 %>
+    <tr>
+      <td><%- counts %></td>
+      <td><%= member.Authorization %></td>
+      <td><%= member.First_Name %></td>
+      <td><%= member.Last_name %></td>
+      <td><%= member.username %></td>
+      <td><%= member.Year %></td>
+      <td><%= member.Branch %></td>
+      <td><%= member.Phone_No %></td>
+      <td><%= member.E_mail %></td>
+      <td><%= member.Domain %></td>
+      <td><a> <i class="fas fa-pen"></i> </a></td>
+      <td><a> <i class="fas fa-trash-alt"></i> </a></td>
+    </tr>
+    <%}%>
+    <%}%>
+   <% })%>
+  </tbody>
+</table>
+
+  </div>
+
+
+  <%- include("partials/footer") %>
