@@ -293,14 +293,16 @@
   text-align: center;
   overflow-x: auto;
 }
+
 }
+
 @media (max-device-width: 470px) and (min-device-width:260px)  {
 .login-form-total-div{  
   margin-top: 10px;
 }
 .rest-body{
   background-color: #000000;
-  min-height: 90vh;
+  min-height: 97vh;
   opacity: 0.99;
 }
 }
