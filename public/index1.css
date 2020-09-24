@@ -98,6 +98,8 @@
 .add-form-total-div{
   margin-top: -450px;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .add-form-hr{
@@ -284,6 +286,12 @@
 }
 .add-form-total-div{
   font-size: 30px;
+  margin-top: -150px;
+}
+.table-member-total-div{
+  margin-top: -350px;
+  text-align: center;
+  overflow-x: auto;
 }
 }
 @media (max-device-width: 470px) and (min-device-width:260px)  {

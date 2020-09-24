@@ -29,7 +29,7 @@
 header {
   position: relative;
   background-color: black;
-  height: auto;
+  height: 100%;
   width: 100%;
   overflow: hidden;
 }
@@ -471,6 +471,14 @@ font-size: 20px;
 
 .coming-button-register{
   font-size: 35px;
+}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 1000px;
+  width: 100%;
+  overflow: hidden;
 }
 
 }
