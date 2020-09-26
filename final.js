@@ -29,7 +29,9 @@ const blogSchema=new mongoose.Schema({
   Editor:String,
   Subject:String,
   Date:String,
-  Content:String
+  Content:String,
+  Approval:String,
+  ApprovedBy:String
 });
 
 const registerSchema=new mongoose.Schema({
@@ -141,7 +143,7 @@ app.get("/add",function(req,res){
 });
 
 app.get("/blog",function(req,res){
- blogrentry.find({},function(err,data){
+ blogrentry.find({Approval:"Approved"},function(err,data){
   if(err){
     res.render("register",{
       messagereg:"Error 404 !"
@@ -178,12 +180,98 @@ app.post("/createblog",function(req,res){
   Editor:req.user.username,
   Subject:req.body.blogsubject,
   Date:req.body.blogdate,
-  Content:req.body.blogcontent
+  Content:req.body.blogcontent,
+  Approval:"Not-Approved"
   });
   blogdone.save();
   res.render("register",{
-    messagereg:"Blog posted successfully !"
+    messagereg:"Request Admin for approval !"
   });
+});
+
+app.get("/approval",function(req,res){
+  if(req.isAuthenticated()&&req.user.Authorization=="Admin"){
+  blogrentry.find({Approval:"Not-Approved"},function(err,data){
+  if(err){
+    res.render("register",{
+      messagereg:"Error 404 !"
+    });
+  }
+  else if(data.length==0){
+    res.render("register",{
+      messagereg:"No approval pending !"
+    });
+  }
+  else{res.render("approval",{
+    data:data,
+    user_name:req.user.First_Name
+  });}  
+ });
+}
+else{
+  res.redirect("/login");
+}
+});
+
+app.get("/approveornot/:find",function(req,res){  
+  if(req.isAuthenticated()&&req.user.Authorization=="Admin"){
+    blogrentry.findOne({_id:req.params.find},function(err,found){
+  if(err){
+    res.render("register",{
+      messagereg:"Blog not found !"
+    })
+  }
+  else{
+  res.render("approvalsingle",{
+    found:found,
+    user_name:req.user.First_Name
+  });
+}
+});
+  }
+  else{
+    res.redirect("/login");
+  }
+});
+
+app.get("/approvedone/:approveid",function(req,res){
+  if(req.isAuthenticated()&&req.user.Authorization=="Admin"){
+  blogrentry.updateOne({_id:req.params.approveid},{
+    Approval:"Approved"
+  },function(err){
+    if(err){
+      res.render("register",{
+      messagereg:"Error 404 !"
+    });
+    }
+    else{
+     res.redirect("/approval");
+    }
+  });
+}
+else{
+  res.redirect("/login");
+}
+});
+
+app.get("/approvedecline/:approveid",function(req,res){
+  if(req.isAuthenticated()&&req.user.Authorization=="Admin"){
+  registerentry.deleteOne({username:req.params.approveid},function(err){
+    if(err){
+      res.render("register",{
+      messagereg:"Error 404 !"
+    });
+    }
+    else{
+     res.render("register",{
+      messagereg:"Declined !"
+    })
+   }
+  });
+}
+else{
+  res.redirect("/login");
+}
 });
 
 app.get("/blog/:find",function(req,res){  
@@ -314,8 +402,10 @@ app.get("/delete/:memberid",function(req,res){
     });
     }
     else{
-     res.redirect("/t");
-    }
+     res.render("register",{
+      messagereg:"Deleted Successfully !"
+    })
+   }
   });
 }
 else{
