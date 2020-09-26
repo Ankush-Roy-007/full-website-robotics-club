@@ -181,7 +181,8 @@ app.post("/createblog",function(req,res){
   Subject:req.body.blogsubject,
   Date:req.body.blogdate,
   Content:req.body.blogcontent,
-  Approval:"Not-Approved"
+  Approval:"Not-Approved",
+  ApprovedBy:"none"
   });
   blogdone.save();
   res.render("register",{
@@ -237,7 +238,8 @@ app.get("/approveornot/:find",function(req,res){
 app.get("/approvedone/:approveid",function(req,res){
   if(req.isAuthenticated()&&req.user.Authorization=="Admin"){
   blogrentry.updateOne({_id:req.params.approveid},{
-    Approval:"Approved"
+    Approval:"Approved",
+    ApprovedBy:req.user.username
   },function(err){
     if(err){
       res.render("register",{
