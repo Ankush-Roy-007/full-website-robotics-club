@@ -10,7 +10,7 @@ const mailTransporter=nodemailer.createTransport({
 	service:'gmail',
 	auth:{
 		user:'aitcear@gmail.com',
-		pass:process.env.PASSWORDMAIL
+		pass:"aitrobotics1234"
 	}
 });
 

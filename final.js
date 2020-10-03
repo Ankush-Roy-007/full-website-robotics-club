@@ -27,7 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://aitcear:aitrobotics@1234@robotics-club-website-d.wkwhk.mongodb.net/Club?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true });
 
 
 const blogSchema=new mongoose.Schema({
@@ -350,7 +350,6 @@ app.get("/approvedecline/:approveid",function(req,res){
     });
     }
     else{
-      console.log(result);
      res.render("register",{
       messagereg:"Declined !"
     })
