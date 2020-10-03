@@ -1,0 +1,19 @@
+<%- include("partials/headerclient") %>
+
+<div style="margin-top: -400px;text-align:center;overflow-x:hidden">
+		<h1 style="color: #23A0A0;text-align: center;font-size: 50px;"><u>Robotics Team</u></h1><br>
+		<div class="row">
+		<%found.forEach(function(member){%>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<a href="uploadsalbum/<%=member.Image_name%>" target="blank">
+				<figure>
+					<img src="uploadsalbum/<%=member.Image_name%>" style="width:300px;height:300px;border:4px solid #23A0A0;border-top-left-radius:10%;border-top-right-radius:10%;">
+					<figcaption style="background-color:#23A0A0;color:white"><%=member.Editor_name%>, <%=member.Editor_Regn_no%>, <%=member.Date%></figcaption>
+				</figure>
+			</a>
+			</div>
+		<%})%>
+	</div>
+</div>
+</div>
+<%- include("partials/footer") %>

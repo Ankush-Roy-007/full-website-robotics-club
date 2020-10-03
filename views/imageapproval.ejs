@@ -1,0 +1,40 @@
+<%- include("partials/headermanager") %>
+
+
+	 <div class="container blog-total-div" style="margin-top: -350px;text-align:center;overflow-x:hidden;">
+    <div class="blog-div single-blog-div imageapprovalclass" style="">
+      <table class="table" >
+  <thead class="table-member-head">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Approve</th>
+      <th scope="col">Name</th>
+      <th scope="col">Regn No.</th>
+      <th scope="col">Date</th>
+      <th scope="col">Image</th>
+      <th scope="col">Decline</th>
+    </tr>
+  </thead>
+  <tbody class="table-member-body table-sm">
+<%count=0; %>
+  <%found.forEach(function(member){%>
+  <%count=count+1 %>
+    <tr>
+      <td><%- count%></td>
+      <td><input type="button" class="btn btn-lg btn-success" name="" value="Approve" onclick="window.location.href='/albumapprovedone/<%=member._id%>'"></td>
+      <td><%= member.Editor_name %></td>
+      <td><%= member.Editor_Regn_no %></td>
+      <td><a target="blank" href="uploadsalbum/<%=member.Image_name%>"><img src="uploadsalbum/<%=member.Image_name%>" style="width:200px"></a></td>
+      <td><%= member.Date %></td>
+      <td><input type="button" class="btn btn-lg btn-danger" name="" value="Decline" onclick="window.location.href='/albumapprovedecline/<%=member._id%>'" style="float:right"></td>
+    </tr>
+   <% })%>
+  </tbody>
+</table>
+    </div><hr style="
+  border:1px solid #576060;width:75%;"><br>
+  </div>
+    
+
+
+<%- include("partials/footer") %>

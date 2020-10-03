@@ -1,21 +1,105 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-	<div class="container">
-    <input type="button" class="btn btn-lg btn-success" name="" value="Approve" onclick="windows.location.href='/good">
-    <input type="button" class="btn btn-lg btn-danger" name="" value="Decline" onclick="windows.location.href='/good">
-  </div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <style>
+    
+.sticky-logo{
+  z-index: -1;
+  height: 500px;
+  border-radius: 100%;
+  opacity: 0.09;
+  position: sticky;
+  width: 520px;
+  top:90px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="addvalidation.js"></script>
-</body>
+.rest-body{
+  background-color: #000000;
+  opacity: 0.99;
+}
+
+
+.contact-div{
+  background-color: #23A0A0;
+  color: black;
+  overflow-x: hidden;
+}
+.copyright{
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 0.8%;
+  font-size: 20px;
+}
+
+.not-registered{
+  text-align: center;
+  margin-top: -350px;
+}
+
+.not-registered-heading{
+  color:#23A0A0;
+  font-size: 70px;
+  padding: 30px;
+}
+
+.not-registered-home{
+  font-size: 25px;
+}
+
+@media (max-width:990px){
+  .sticky-logo{
+  z-index: 0;
+  height: 500px;
+  border-radius: 100%;
+  opacity: 0.09;
+  position: sticky;
+  width: 520px;
+  top:33%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+@media (max-device-width: 470px) and (min-device-width:260px)  {
+
+.rest-body{
+  background-color: #000000;
+  opacity: 0.99;
+}
+}
+    </style>
+  </head>
+  <body>
+    
+    <div class="rest-body">
+    	<div class="" style="width: 100%;background-color:#23A0A0 ">
+    	<h1 style="font-size: 80px;text-align: center;color:black;font-weight: bolder; ">
+    		<img src="https://lh3.googleusercontent.com/EXVcbillLHyPjFL42Dwiu4FDrXL9UOKWxzODl2RmvC5HyZf7EmSGP9gGA0YEdB5DnJyMpLE_ue9fUAw9xcZtWYs7psTAPfy2Xpo4T_d6XN93-ou9RYwwjokr0K8kUG-1nNjs3fLXtITOmpDSF-CVlShzaJkAkUvqIVNfiDsXk5eQ8-yRUj_BAV3dXVD0KKZ8E0h2p0z9aYO3cHgbL_iFlS4MnpvRlSfa7oAePe-VTzMTv_RDaSQQLReelHTn5ZuMp6nM9rdQO-DtiePUzuRuBclDsGOUly9bxfvY8cVG5nvnt9vbVeWETrg14mI9EEjNiP2bOFzzgpwDcUqqGZE4QfE7YwqL1_Dz0zPzIr4zlXKZrNTG7KhtR-UxTzgMGM0k5laIkcBL54VSpuOhZTvJeDJMSQ6X-v9AtW2PibnCqYjZvikTlNih9N3kRvDMTSSzoiKDOJMwhAjEAi1VAM2RFO_2EdqjdNJg1WmJDBIxthqM7UlNqqyeh0Yc_lZ_lnNM_Nt_O8Oypm2w2gPspw2l8ZT0Z7E8mXYb7T0HY7NRr6kbbTq6NseUF9JKOaZ_dvRqpKiZYSNvkbJsS3eUnoTal3I6BGPDp8LHph0h117q45QbE71UhE_NILZTgiIXhZCks2c-WMc8V38gisLBfg7Hd6pw6FatjANkED_0R7wJUZEYtDMsHXGHlxIG4Xo=w678-h476-no?authuser=1" style="border-radius: 100%;width: 100px;height: 100px;margin-right: 10px;">AIT-CEAR</h1>
+        </div>
+    	<br>
+    <img src="https://lh3.googleusercontent.com/EXVcbillLHyPjFL42Dwiu4FDrXL9UOKWxzODl2RmvC5HyZf7EmSGP9gGA0YEdB5DnJyMpLE_ue9fUAw9xcZtWYs7psTAPfy2Xpo4T_d6XN93-ou9RYwwjokr0K8kUG-1nNjs3fLXtITOmpDSF-CVlShzaJkAkUvqIVNfiDsXk5eQ8-yRUj_BAV3dXVD0KKZ8E0h2p0z9aYO3cHgbL_iFlS4MnpvRlSfa7oAePe-VTzMTv_RDaSQQLReelHTn5ZuMp6nM9rdQO-DtiePUzuRuBclDsGOUly9bxfvY8cVG5nvnt9vbVeWETrg14mI9EEjNiP2bOFzzgpwDcUqqGZE4QfE7YwqL1_Dz0zPzIr4zlXKZrNTG7KhtR-UxTzgMGM0k5laIkcBL54VSpuOhZTvJeDJMSQ6X-v9AtW2PibnCqYjZvikTlNih9N3kRvDMTSSzoiKDOJMwhAjEAi1VAM2RFO_2EdqjdNJg1WmJDBIxthqM7UlNqqyeh0Yc_lZ_lnNM_Nt_O8Oypm2w2gPspw2l8ZT0Z7E8mXYb7T0HY7NRr6kbbTq6NseUF9JKOaZ_dvRqpKiZYSNvkbJsS3eUnoTal3I6BGPDp8LHph0h117q45QbE71UhE_NILZTgiIXhZCks2c-WMc8V38gisLBfg7Hd6pw6FatjANkED_0R7wJUZEYtDMsHXGHlxIG4Xo=w678-h476-no?authuser=1" class="sticky-logo">
+<div class="not-registered" style="margin-top: -450px;">
+  <h1 class="not-registered-heading"><%= name %> !</h1><br>
+  <h2  style="color: white"><%= messagereg %> !</h2><br><br><br><br>
+ </div>
+   <div>
+   	<button onclick="window.location.href='https://drive.google.com/drive/u/1/folders/1hStJhgB7FN7m27_mrK1qDGDRhLA7O9y9'" class="btn btn-lg btn-primary" style="display: block;width:370px; margin: auto;font-size: 30px;">Click to visit our Website</button><br><br>
+   </div>
+</div>
+  </body>
+  <div class="contact-div">  
+    <div>
+      <p class="copyright">
+        Copyright © 2020 AIT-CEAR.
+      </p>
+    </div><br>
+</div>
 </html>
-

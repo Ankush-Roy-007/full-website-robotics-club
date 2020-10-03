@@ -1,0 +1,42 @@
+<%- include("partials/headermanager") %>
+
+
+	 <div class=" container-fluid blog-total-div" style="margin-top: -350px;text-align:center;overflow-x:hidden;">
+    <div class="blog-div single-blog-div imageapprovalclass" style="">
+      <table class="table" >
+  <thead class="table-member-head">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Editor_Name</th>
+      <th scope="col">Editor_Regn_no.</th>
+      <th scope="col">Approved-By</th>
+      <th scope="col">Date</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Content</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody class="table-member-body table-sm">
+<%count=0; %>
+  <%found.forEach(function(member){%>
+  <%count=count+1 %>
+    <tr>
+      <td><%- count %></td>
+      <td><%= member.Editor_Name %></td>
+      <td><%= member.Editor_Regn %></td>
+      <td><%= member.ApprovedBy %></td>
+      <td><%= member.Date %></td>
+      <td><%= member.Subject.substring(0,100)%></td>
+      <td><%= member.Content.substring(0,100)%></td>
+      <td><a href="/blogviewadmin/<%=member._id %>"> <i class="fas fa-trash-alt"></i> </a></td>
+    </tr>
+   <% })%>
+  </tbody>
+</table>
+    </div><hr style="
+  border:1px solid #576060;width:75%;"><br>
+  </div>
+    
+
+
+<%- include("partials/footer") %>
