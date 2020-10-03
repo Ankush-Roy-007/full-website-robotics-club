@@ -350,6 +350,7 @@ app.get("/approvedecline/:approveid",function(req,res){
     });
     }
     else{
+      console.log(result);
      res.render("register",{
       messagereg:"Declined !"
     })
@@ -870,6 +871,7 @@ app.get("/blogviewadmin",function(req,res){
   }
   })
 
+<<<<<<< HEAD
 app.get("/blogviewadmin/:approveid",function(req,res){
   if(req.isAuthenticated()&&req.user.Authorization=="Admin"){
   blogrentry.deleteOne({_id:req.params.approveid},function(err,result){
@@ -937,6 +939,8 @@ else{
 }
   });
 
+=======
+>>>>>>> 57c4e9f88d4f81809e225eafb431974f4a2e397f
 app.listen(process.env.PORT||3000,function(){
   console.log("Server Started at port 3000");
 });
