@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="text/css" href="../photos/logo-ico.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"  href="../index1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>AIT-CEAR</title>
+<style type="text/css">
+	label {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 280px;
+    height: 400px;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+
+}
+
+    .card .front {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #FFF;
+        text-align: center;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+        border:1px solid #23A0A0;
+    background-color: black;
+
+    }
+    .card .back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #FFF;
+        text-align: center;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+        border:1px solid #23A0A0;
+    background-color: black;
+
+    }
+    .card .front img {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #23A0A0;
+        border-radius: 100%;
+        padding: 10px;
+    }
+    .card .back {
+        background: #222;
+        color: #FFF;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+       width: 320px;
+    height: 400px;
+    }
+
+label:hover .card {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+input {
+    display: none;
+}
+
+:checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(255,255,255,.2);
+}
+
+
+.backhead{
+    color: #23A0A0;
+}
+.fab {
+  padding: 10px;
+  font-size: 40px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  box-shadow: 0 15px 20px #23A0A0;
+}
+.fa-facebook-f {
+  background: #3B5998;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-instagram {
+   background: #C13584;
+  color: white;
+}
+.fab:hover {
+    color: #23A0A0;
+}
+</style>
+
+  </head>
+  <body>
+
+    <div class="navnav">
+      <nav class="navbar navbar-expand-lg navbar-dark"  style="position: fixed;width: 100%; ">
+        <img src="../photos/AIT-CEAR.jpg" alt="AIT-CEAR.jpg" class="nav-logo">
+        <a class="navbar-brand nav-title" href="/">AIT-CEAR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav nav-menu">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/testemonialteamclient">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/albumclient">Album</a>
+            </li>
+            <!--<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Others
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Album</a>
+                <a class="dropdown-item" href="#">Projects</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>-->
+          </ul>
+          <button type="button" name="button" class="btn btn-outline-primary" onclick="window.location.href='/login'"><i class="fas fa-user-circle"></i><span class="nav-login">Login</span></button>
+        </div>
+      </nav>
+    </div>
+    <div class="rest-body">
+    <img src="../photos/full-logo.jpg" class="sticky-logo">
+<div style="margin-top: -400px;overflow-x: hidden;">
+  <h1 style="color: #23A0A0;text-align: center;font-size: 50px;"><u>Robotics Team</u></h1><br>
+  <div class="row">
+  <% found.forEach(function(one){%>
+  <% if(one.Member_Year=="BE"){%>
+  <div class="col-lg-4 col-md-4" style="margin-top: 50px;">
+    <label>
+    <input type="checkbox"  />
+    <div class="card">
+        <div class="front">
+          <div style="padding: 10px;">
+            <img src="uploadstestemonial/<%=one.Image_name%>">
+          </div>
+          <div style="background-color: #23A0A0;">
+            <h2 style="color: white;"><%=one.Member_firstname%></h2>
+            <span style="font-size: 18px;font-weight: bold;color: white;"><%=one.Member_Branch%> <br>( <%=one.Member_Year%> ) </span><br><br>
+            <a class="btn btn-success btn-block" style="color: white">Click to View Profile</a>
+          </div>
+        </div>
+        <div class="back">
+             <h3 class="backhead"><u>Domain</u></h3> 
+             <h4><%=one.Member_Domain%></h4><br> 
+             <h3 class="backhead"><u>Phone No.</u></h3> 
+             <h4><%=one.Member_Phone_no%></h4><br>
+             <h3 class="backhead"><u>E-mail ID</u></h3> 
+             <h4><%=one.Member_Email%></h4><br>
+             <div class="row">
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="<%=one.Member_Facebook%>" target="_blank" class="fab fa-facebook-f"></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="mailto:<%=one.Member_Email%>" target="_blank" class="fab fa-google"></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="<%=one.Member_Instagram%>" target="_blank" class="fab fa-instagram"></a>
+                 </div>
+            </div>     
+             </div>
+        </div>
+        </label>
+    </div>
+<%}%>
+<%})%>
+  </div>
+
+	<div class="row">
+	<% found.forEach(function(one){%>
+  <% if(one.Member_Year=="TE"){%>
+	<div class="col-lg-4 col-md-4" style="margin-top: 50px;">
+		<label>
+    <input type="checkbox"  />
+    <div class="card">
+        <div class="front">
+        	<div style="padding: 10px;">
+        		<img src="uploadstestemonial/<%=one.Image_name%>">
+        	</div>
+        	<div style="background-color: #23A0A0;">
+        		<h2 style="color: white;"><%=one.Member_firstname%></h2>
+        		<span style="font-size: 18px;font-weight: bold;color: white;"><%=one.Member_Branch%> <br>( <%=one.Member_Year%> ) </span><br><br>
+        		<a class="btn btn-success btn-block" style="color: white">Click to View Profile</a>
+        	</div>
+        </div>
+        <div class="back">
+             <h3 class="backhead"><u>Domain</u></h3> 
+             <h4><%=one.Member_Domain%></h4><br> 
+             <h3 class="backhead"><u>Phone No.</u></h3> 
+             <h4><%=one.Member_Phone_no%></h4><br>
+             <h3 class="backhead"><u>E-mail ID</u></h3> 
+             <h4><%=one.Member_Email%></h4><br>
+             <div class="row">
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="<%=one.Member_Facebook%>" target="_blank" class="fab fa-facebook-f"></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="mailto:<%=one.Member_Email%>" target="_blank" class="fab fa-google"></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="<%=one.Member_Instagram%>" target="_blank" class="fab fa-instagram"></a>
+                 </div>
+            </div>     
+             </div>
+        </div>
+        </label>
+    </div>
+<%}%>
+<%})%>
+	</div><br>
+
+<div class="row">
+  <% found.forEach(function(one){%>
+  <% if(one.Member_Year=="SE"){%>
+  <div class="col-lg-4 col-md-4" style="margin-top: 50px;">
+    <label>
+    <input type="checkbox"  />
+    <div class="card">
+        <div class="front">
+          <div style="padding: 10px;">
+            <img src="uploadstestemonial/<%=one.Image_name%>">
+          </div>
+          <div style="background-color: #23A0A0;">
+            <h2 style="color: white;"><%=one.Member_firstname%></h2>
+            <span style="font-size: 18px;font-weight: bold;color: white;"><%=one.Member_Branch%> <br>( <%=one.Member_Year%> ) </span><br><br>
+            <a class="btn btn-success btn-block" style="color: white">Click to View Profile</a>
+          </div>
+        </div>
+        <div class="back">
+             <h3 class="backhead"><u>Domain</u></h3> 
+             <h4><%=one.Member_Domain%></h4><br> 
+             <h3 class="backhead"><u>Phone No.</u></h3> 
+             <h4><%=one.Member_Phone_no%></h4><br>
+             <h3 class="backhead"><u>E-mail ID</u></h3> 
+             <h4><%=one.Member_Email%></h4><br>
+             <div class="row">
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="<%=one.Member_Facebook%>" target="_blank" class="fab fa-facebook-f"></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="mailto:<%=one.Member_Email%>" target="_blank" class="fab fa-google"></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="<%=one.Member_Instagram%>" target="_blank" class="fab fa-instagram"></a>
+                 </div>
+            </div>     
+             </div>
+        </div>
+        </label>
+    </div>
+<%}%>
+<%})%>
+  </div>
+<div class="row">
+  <% found.forEach(function(one){%>
+  <% if(one.Member_Year=="FE"){%>
+  <div class="col-lg-4 col-md-4" style="margin-top: 50px;">
+    <label>
+    <input type="checkbox"  />
+    <div class="card">
+        <div class="front">
+          <div style="padding: 10px;">
+            <img src="uploadstestemonial/<%=one.Image_name%>">
+          </div>
+          <div style="background-color: #23A0A0;">
+            <h2 style="color: white;"><%=one.Member_firstname%></h2>
+            <span style="font-size: 18px;font-weight: bold;color: white;"><%=one.Member_Branch%> <br>( <%=one.Member_Year%> ) </span><br><br>
+            <a class="btn btn-success btn-block" style="color: white">Click to View Profile</a>
+          </div>
+        </div>
+        <div class="back">
+             <h3 class="backhead"><u>Domain</u></h3> 
+             <h4><%=one.Member_Domain%></h4><br> 
+             <h3 class="backhead"><u>Phone No.</u></h3> 
+             <h4><%=one.Member_Phone_no%></h4><br>
+             <h3 class="backhead"><u>E-mail ID</u></h3> 
+             <h4><%=one.Member_Email%></h4><br>
+             <div class="row">
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="<%=one.Member_Facebook%>" target="_blank" class="fab fa-facebook-f"></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="mailto:<%=one.Member_Email%>" target="_blank" class="fab fa-google"></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <a href="<%=one.Member_Instagram%>" target="_blank" class="fab fa-instagram"></a>
+                 </div>
+            </div>     
+             </div>
+        </div>
+        </label>
+    </div>
+<%}%>
+<%})%>
+  </div>
+
+</div>
+
+  
+
+</div>
+  
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/addvalidation.js"></script>
+  </body>
+  <div class="contact-div">  
+    <div>
+      <p class="copyright">
+        Copyright © 2020 AIT-CEAR.
+      </p>
+    </div><br>
+</div>
+</html>
