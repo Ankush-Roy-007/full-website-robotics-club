@@ -475,7 +475,7 @@ app.post("/updatedone/:memberid",function(req,res){
     });
     }
     else{      
-        var x=send(req.body.email,"Account Details Updated..!","Your account details has be updated..!",req.body.fname);       
+        var x=send(req.body.email,"Account Details Updated..!","Your account details has been updated..!",req.body.fname);       
      res.redirect("/all");
     }
   });
@@ -841,7 +841,6 @@ app.get("/albumclient",function(req,res){
       });
     }
     else{
-      console.log(found);
       res.render("albumclient",{
         found:found 
       });
@@ -856,6 +855,11 @@ app.get("/blogviewadmin",function(req,res){
     blogrentry.find({Approval:"Approved"},function(err,found){
       if(err){
         console.log(err);
+      }
+      else if(found==null){
+        res.render("register",{
+          messagereg:"No blog is approved"
+        })
       }
       else{
         res.render("approvedblogs",{
@@ -878,7 +882,6 @@ app.get("/blogviewadmin/:approveid",function(req,res){
     });
     }
     else{
-      console.log(result);
      res.render("register",{
       messagereg:"Successfully Deleted !"
     })
@@ -896,6 +899,11 @@ app.get("/albumphotosadmin",function(req,res){
     albumphotoupload.find({Approval:"Approved"},function(err,found){
       if(err){
         console.log(err);
+      }
+      else if(found==null){
+        res.render("register",{
+          messagereg:"No photo is approved"
+        })
       }
       else{
         res.render("approvedimgadmin",{
