@@ -22,8 +22,13 @@ const mailcontent={
 	from:'aitcear@gmail.com',
 	to:email,
 	subject:subject,
-	html:data
-}
+	html:data,
+	attachments:[{
+		filename:"AIT-CEAR.jpg",
+		path:__dirname+"/public/photos/AIT-CEAR.jpg",
+		cid:"uniqueID@create.ee"
+	}]
+};
 mailTransporter.sendMail(mailcontent,function(err,info){
 	if(err){
 		console.log(err);
