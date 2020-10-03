@@ -716,7 +716,7 @@ const storagealbum=multer.diskStorage({
     const uploadalbumimg=multer({
       storage:storagealbum
     });
-app.post("/uploadalbumimg",uploadalbumimg.single("albumimg"),function(req,res){
+app.post("/uploadalbumimga",uploadalbumimg.single("albumimg"),function(req,res){
   const done=new albumphotoupload({
   Editor_name:req.user.First_Name+" "+req.user.Last_name,
   Editor_Regn_no:req.user.username,
