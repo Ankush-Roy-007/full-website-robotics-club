@@ -938,9 +938,6 @@ else{
   res.redirect("/login");
 }
   });
-
-=======
->>>>>>> 57c4e9f88d4f81809e225eafb431974f4a2e397f
 app.listen(process.env.PORT||3000,function(){
   console.log("Server Started at port 3000");
 });
