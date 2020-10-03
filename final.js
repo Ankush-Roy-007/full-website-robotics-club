@@ -870,8 +870,6 @@ app.get("/blogviewadmin",function(req,res){
     res.redirect("/login");
   }
   })
-
-<<<<<<< HEAD
 app.get("/blogviewadmin/:approveid",function(req,res){
   if(req.isAuthenticated()&&req.user.Authorization=="Admin"){
   blogrentry.deleteOne({_id:req.params.approveid},function(err,result){
